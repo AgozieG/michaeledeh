@@ -1,0 +1,296 @@
+/* ---------- Responsive CSS (replace your existing CSS with this) ---------- */
+
+/* Reset and Base Styles */
+* {
+  
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* kept original background */
+  min-height: 100vh;
+  padding-top: 50px;
+  
+}
+
+/* Re-usable text block styles (keeps your original look) */
+.text {
+  text-align: left;
+  font-size: 16px;
+  font-family: Verdana, Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  margin: 20px;
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+/* ---------- PROFILE CARD (main layout) ---------- */
+.profile-card {
+  display: flex;               /* left = info, right = image */
+  flex-direction: row;
+  width: 800px;                /* desktop starting width (keeps arrangement) */
+  max-width: calc(100% - 40px);
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin-top: 60px;
+  margin-right: 20px;
+  float: right;               /* keeps the float arrangement on large screens */
+}
+
+/* Info side (left) */
+.info-section {
+  /* Use calc so info takes remaining space beside the image */
+  width: calc(100% - 280px);
+  padding: 20px;
+  background: url('swirl-pattern.png') no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-left: 5px;
+  margin-top: -100px;
+  background-size: cover;
+}
+
+/* Name / title black box - keep same look but fluid width */
+.name-title-box {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;  /* kept */
+  color: #000000;            /* kept */
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  width: auto;               /* made fluid to prevent overflow on small screens */
+  max-width: 100%;
+  margin-top: 30px;
+}
+
+/* Name details */
+.name-details h1 {
+  margin-top: 50px;
+  font-size: 30px;
+  margin-bottom: 4px;
+  color: rgb(0, 0, 0);
+}
+.name-details p {
+  font-size: 13px;
+}
+
+/* Contact section */
+.contact-section {
+  margin-bottom: 20px;
+}
+.contact-section p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+.contact-section p i {
+  margin-right: 8px;
+  color: #f26722;  /* accent color retained */
+}
+
+/* Social icons - grid-based and responsive */
+.social-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* desktop: 3 columns (keeps arrangement) */
+  grid-template-rows: repeat(2, 1fr);
+  gap: 35px;
+  margin: 10px;
+  column-gap: 10px;
+  align-items: center;
+}
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  margin-left: -30px;
+  max-width: 100%;
+  height: auto;
+}
+.social-icons a .second {
+  width: 140px;
+  height: 65px;
+  border-radius: 100px;
+  transition: transform 0.2s ease;
+  max-width: 100%;
+  height: auto;
+}
+.social-icons a .first {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  margin-top: 20px;
+  margin-left: 10px;
+  max-width: 100%;
+  height: auto;
+}
+.social-icons a .third {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  margin-top: 20px;
+  margin-left: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Image side (right) */
+.image-section {
+  flex-shrink: 0;
+  width: 280px;               /* fixed image column on desktop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Small bounce hover preserved */
+.social-icons a:hover {
+  animation: bounce 0.5s;
+}
+@keyframes bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* ---------- TABLET (<= 1024px) ---------- */
+@media (max-width: 1024px) {
+  .profile-card {
+    /* keep side-by-side when possible, but shrink to fit tablet screens */
+    width: 95%;
+    float: right;
+    margin-right: 10px;
+  }
+
+  .image-section {
+    width: 240px; /* slightly smaller image column for tablets */
+  }
+
+  .info-section {
+    width: calc(100% - 240px);
+    padding: 18px;
+    margin-top: -60px; /* keep visual offset but reduced */
+    background-position: center;
+  }
+
+  .name-details h1 {
+    font-size: 26px;
+  }
+
+  .social-icons {
+    gap: 22px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .social-icons a img,
+  .social-icons a .first,
+  .social-icons a .second,
+  .social-icons a .third {
+    /* scale images down gently */
+    max-height: 55px;
+    width: auto;
+  }
+}
+
+/* ---------- PHONE (<= 768px) ---------- */
+@media (max-width: 768px) {
+  body {
+    padding-top: 0px;
+  }
+
+  .profile-card {
+    /* stack vertically on phones (info first, image below) */
+    flex-direction: column;
+    width: 95%;
+    float: none;          /* remove float so card centers */
+    margin: 12px auto 20px;
+  }
+
+  .info-section {
+    width: 100%;
+    padding: 16px;
+    margin-top: 0;        /* remove negative offset so content flows naturally */
+    background-position: top;
+  }
+
+  .image-section {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .image-section img {
+    width: 220px;         /* keep image visible but constrained */
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .name-details h1 {
+    font-size: 22px;
+    line-height: 1.15;
+    margin-top: -20px;
+  }
+
+  .name-details p {
+    font-size: 12px;
+  }
+
+  .name-title-box {
+    padding: 10px 12px;
+    margin-top: 10px;
+  }
+
+  .social-icons {
+    /* make icons wrap nicely on small screens */
+    grid-template-columns: repeat(4, auto);
+    gap: 12px;
+    justify-items: start;
+    align-items: center;
+  }
+
+  .social-icons a img,
+  .social-icons a .first,
+  .social-icons a .second,
+  .social-icons a .third {
+    margin-left: 0;   /* remove large negative margins that caused overflow */
+    width: auto;
+    height: 44px;
+    max-width: 100%;
+  }
+  .social-icons a .second{
+    margin-top: 20px;
+  }
+
+  .contact-section p {
+    font-size: 15px;
+  }
+
+  .text {
+    margin: 14px;
+    margin-top: 18px;
+    font-size: 15px;
+  }
+}
+
+/* ---------- Very small phones (<= 420px) ---------- */
+@media (max-width: 420px) {
+  .name-details h1 { font-size: 20px; }
+  .image-section img { max-width: 70%; }
+  .social-icons { grid-template-columns: repeat(3, auto); gap: 10px; }
+}

@@ -1,0 +1,267 @@
+/* Reset / Box-Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+  }
+  
+  /* Header and Nav */
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: background-color 0.3s ease;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: rgb(72, 72, 72);
+  }
+  
+  /* Sticky nav effect */
+  header.sticky {
+    background-color: rgba(0, 0, 0, 0.95);
+    animation: slideDown 0.5s ease forwards;
+  }
+  
+  /* Navbar layout */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: transparent;
+    color: #000;
+  }
+  
+  /* Logo area */
+  .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Nav links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #1e90ff;
+  }
+
+
+  /* Initial styles for the link */
+  .nav-links a{
+  text-decoration: none;
+  position: relative;
+  color: #ffffff; /* Change this to your preferred color */
+}
+
+/* Create the underline effect */
+.nav-links a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the underline */
+  bottom: 0;
+  left: 0;
+  background-color: #4facfe; /* Change this to your preferred color */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 1s ease-in-out; /* Adjust the duration and timing function */
+}
+
+/* Hover effect */
+.nav-links a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.nav-links a:active{
+  color: #ffd6f2;
+  text-decoration: underline;
+  position: relative;
+  color: #ffffff; /* Change this to your preferred color */
+  
+}
+
+
+
+
+
+  
+  /* Dropdown styles */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background-color: #333;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 1s ease-in-out;
+  }
+  
+  .dropdown-content li {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+  }
+  
+  .dropdown-content li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .dropdown-content li a:hover {
+    background-color: #555;
+  }
+  
+  /* Hero / Intro Section */
+
+  /* Animations */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Simple fadeIn animations */
+  .animated {
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+  
+  .fadeInDown {
+    animation: fadeInDown 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* main/static/css/style.css */
+
+/* Logo image styling */
+
+
+  /* Ensure proper spacing in navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+  }
+.navbar.logo.left{
+    display: inline;
+  }
+
+/* Align the logo image and text side by side */
+.logo {
+  align-items: center; /* Vertically center the text with the image */
+}
+
+.logo-img {
+  margin-right: -0px; /* Add some spacing between the image and the text */
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+  border-width: 200px;
+  box-shadow: #000000 10px 10px 20px;
+  height: 90px; /* Adjust height as needed */
+  width: auto;
+  vertical-align: middle;
+  border-radius: 30px;
+  padding: auto;
+  margin-left: -70px;
+}
+.logo-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%; /* Optional: make the image circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow to the image */
+  border-width: 8px;
+  border-color: white;
+}
+
+.logo p {
+  margin: 0; /* Remove default margin from the text */
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  color: white; /* Ensure the text color is visible */
+  margin-left: 50px;
+  margin-top: -70px;
+  padding: 10px;
+  padding-bottom: 30px;
+}
+
+
+.navbar‐brand {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+/* match your previous img dimensions */
+.brand‐video {
+  height: 50px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 4px; /* if you want rounded corners */
+}
+

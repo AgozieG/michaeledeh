@@ -1,0 +1,315 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px;
+    background: radial-gradient(circle, #f9f9f9, #f1f1f1);
+  }
+  h2{
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    margin-top: 150px;
+    font-size: 40px;
+    margin-left: 70px;
+    text-decoration: underline;
+  }
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    height: 250px;
+    padding-bottom: 20px;
+  }
+  .card .text {
+    color: rgb(63, 63, 63);
+    margin-top: 5px;
+    padding-bottom: 50px;
+  }
+  .card .card-title:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(119, 136, 153,0.5);
+    margin: 5px;
+    border-radius: 0%;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px;
+    text-decoration: none;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  .white{
+    color: white;
+  }
+  .banner {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 130px;
+    margin-left: 300px;
+    margin-bottom: 10px;
+    width: 50%;
+  }
+  .banner .line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: black;
+    margin-top: 17px;
+  }
+  .banner .text {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(53, 53, 53);
+    margin: 0 20px;
+    text-transform: uppercase;
+    background-color: rgb(207, 207, 207);
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .foot{
+    width: 100%;
+  }
+
+
+
+
+  /* Centered container */
+  .publication-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Publication entry styled as a card with flex layout */
+  .publication-entry {
+    position: relative; /* For orange stripe */
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  .publication-entry:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.9s ease, box-shadow 1s ease;
+  }
+
+  /* Orange vertical stripe on the left */
+  .publication-entry::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(135deg, #1e90ff, #4facfe);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  /* The publication image on the left side */
+  .publication-image {
+    width: 90px;
+    height: 140px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 20px; /* Creates spacing from the borders */
+    flex-shrink: 0;  /* Prevent image from shrinking */
+  }
+
+    .publication-image1 {
+    width: 120px;
+    height: 80px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 20px; /* Creates spacing from the borders */
+    flex-shrink: 0;  /* Prevent image from shrinking */
+  }
+
+    .publication-image3 {
+    width: 300px;
+    height: 90px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 20px; /* Creates spacing from the borders */
+    flex-shrink: 0;  /* Prevent image from shrinking */
+  }
+
+    .publication-image4 {
+    width: 430px;
+    height: 90px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 20px; /* Creates spacing from the borders */
+    flex-shrink: 0;  /* Prevent image from shrinking */
+  }
+
+    .publication-image2 {
+    width: 240px;
+    height: 80px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 20px; /* Creates spacing from the borders */
+    flex-shrink: 0;  /* Prevent image from shrinking */
+  }
+
+  /* Container for the textual information */
+  .publication-info {
+    padding: 20px;
+  }
+
+  .publication-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .publication-details {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+
+  .publication-meta {
+    font-size: 0.85rem;
+    color: #666;
+  }
+
+  .publication-meta span.publisher {
+    font-weight: bold;
+    color: #333;
+  }
+  a {
+    text-decoration: none;
+    color: rgb(59, 59, 59); /* Link color */
+  }
+
+
+
+
+/* ------------------------------------------------------------------ */
+/* Tablet: <= 1024px — keep two columns but reduce image sizes & gaps */
+/* ------------------------------------------------------------------ */
+@media (max-width: 1024px) {
+  .publication-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    padding: 0 12px;
+  }
+
+  .publication-entry {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  /* scale down the larger class-based images so they don't overflow */
+  .publication-image  { width: 72px !important; height: auto !important; margin: 12px !important; }
+  .publication-image1 { width: 96px !important; height: auto !important; margin: 12px !important; }
+  .publication-image2 { width: 140px !important; height: auto !important; margin: 12px !important; }
+  .publication-image3 { width: 160px !important; height: auto !important; margin: 12px !important; }
+  .publication-image4 { width: 200px !important; height: auto !important; margin: 12px !important; }
+
+  .publication-title { font-size: 0.98rem; }
+  .publication-entry::before { width: 5px; } /* keep stripe visible */
+}
+
+/* ------------------------------------------------------------------ */
+/* Phone: <= 768px — single column, full width cards, small images       */
+/* NOTE: image left + text right preserved, but sizes reduced to fit   */
+/* ------------------------------------------------------------------ */
+@media (max-width: 768px) {
+  /* make container single column so each entry is full width */
+  .publication-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  /* ensure anchors fill width */
+  .publication-container > a { display: block; }
+
+  .publication-entry {
+    padding: 10px;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  /* tighten stripe and spacing */
+  .publication-entry::before {
+    left: 0;
+    top: 0;
+    width: 4px;
+  }
+
+  /* reduce image sizes so the content fits comfortably on phones */
+  .publication-image  { width: 56px !important; height: auto !important; margin: 8px !important; }
+  .publication-image1 { width: 64px !important; height: auto !important; margin: 8px !important; }
+  .publication-image2 { width: 96px !important; height: auto !important; margin: 8px !important; }
+  .publication-image3 { width: 110px !important; height: auto !important; margin: 8px !important; }
+  .publication-image4 { width: 140px !important; height: auto !important; margin: 8px !important; }
+
+  /* text sizing and spacing for readability on small screens */
+  .publication-info { padding: 6px 4px; }
+  .publication-title { font-size: 0.92rem; line-height: 1.28; }
+
+  /* avoid horizontal scroll if something still slightly overflows */
+  html, body { overflow-x: hidden; }
+}
+
+/* ------------------------------------------------------------------ */
+/* Very small phones: <= 420px — extra small text and images           */
+/* ------------------------------------------------------------------ */
+@media (max-width: 420px) {
+  .publication-entry { gap: 8px; padding: 8px; }
+  .publication-image  { width: 48px !important; margin: 6px !important; }
+  .publication-image1 { width: 56px !important; margin: 6px !important; }
+  .publication-image2 { width: 84px !important; margin: 6px !important; }
+  .publication-image3 { width: 96px !important; margin: 6px !important; }
+  .publication-image4 { width: 120px !important; margin: 6px !important; }
+  .publication-title { font-size: 0.86rem; }
+  .publication-info { padding: 6px 4px; }
+}
+
+/* ------------------------------------------------------------------ */
+/* Banner adjustments so it centers nicely on smaller screens         */
+/* ------------------------------------------------------------------ */
+@media (max-width: 1024px) {
+  .banner {
+    margin-top: 70px;   /* reduce top gap on tablet */
+    margin-left: 0;
+    width: 100%;
+    padding: 18px 12px 6px;
+  }
+  .banner .text { font-size: 20px; padding: 6px 12px; }
+}
+
+@media (max-width: 420px) {
+  .banner { padding: 12px 10px; margin-top: 48px; }
+  .banner .text { font-size: 16px; padding: 4px 8px; }
+}

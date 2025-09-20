@@ -1,0 +1,129 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px;
+    background: radial-gradient(circle, #f9f9f9, #f1f1f1);
+  }
+  h2{
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    margin-top: 150px;
+    font-size: 40px;
+    margin-left: 70px;
+    text-decoration: underline;
+  }
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    background-color: #fff;
+    padding: 2px;
+    height: 350px;
+  }
+  .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+  .card img:hover {
+    transform: scale(1.15);
+    transition: transform 0.3s ease;
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    padding: 20px;
+    text-decoration: none;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  .white{
+    color: white;
+  }
+  .banner {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 130px;
+    margin-left: 175px;
+    width: 70%;
+  }
+  .banner .line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: black;
+    margin-top: 17px;
+  }
+  .banner .text {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(53, 53, 53);
+    margin: 0 20px;
+    text-transform: uppercase;
+    background-color: rgb(207, 207, 207);
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+
+/* ---------- Responsive: phones (<= 768px) ---------- */
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; } /* defensive */
+
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 1px !important;
+    padding: 10px !important;
+    max-width: 80% !important;
+    width: 100%;
+  }
+
+  .card {
+    height: 340px !important;           /* let image determine height on phones */
+    max-width: 80% !important;
+    padding: 6px !important;
+    border-radius: 6px !important;
+    gap: 10px;
+    margin-left: 80px;
+    
+  }
+  .container a{
+    width: 100%;
+  }
+
+  .card img {
+    height: 330px !important;
+    max-height: 480px; /* cap so super tall images don't explode layout */
+    width: 100%;
+  }
+
+  .banner { margin-top: 12px !important; padding: 10px !important; margin-left: -30px; width: calc(100% + 60px); }
+}
+
+/* ---------- Small phones (<= 420px) ---------- */
+@media (max-width: 420px) {
+  .container { padding: 8px !important; gap: 10px !important; }
+  .card img { max-height: 320px !important; }
+}

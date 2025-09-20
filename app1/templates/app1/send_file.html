@@ -1,0 +1,100 @@
+<!-- myapp/templates/myapp/send_file.html -->
+
+{% comment %} {% if error %}
+  <div style="color:red;">{{ error }}</div>
+{% endif %}
+{% if success %}
+  <div style="color:green;">{{ success }}</div>
+{% endif %}
+{% load static %}
+{% include "app1/base.html" %}
+<link rel="stylesheet" href="{% static 'send_file.css' %}">
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Send a File</title>
+</head>
+<body>
+  <h1>Upload & Send File</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Send Email</button>
+  </form>
+</body>
+</html> {% endcomment %}
+
+
+{% load static %}
+{% include "app1/base.html" %}
+<link rel="stylesheet" href="{% static 'send_file.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Send a File</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'send_file.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h1>Upload &amp; Send File</h1>
+
+    {% if messages %}
+      {% for msg in messages %}
+        <div class="success">{{ msg }}</div>
+      {% endfor %}
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <p>
+        <label for="{{ form.subject.id_for_label }}">Subject</label>
+        {{ form.subject }}
+      </p>
+      <p>
+        <label for="{{ form.message.id_for_label }}">Message</label>
+        {{ form.message }}
+      </p>
+      <p>
+        <label for="{{ form.attachment.id_for_label }}">Attachment</label>
+        {{ form.attachment }}
+      </p>
+      <button type="submit">Send Email</button>
+    </form>
+  </div>
+</body>
+</html>
+
+<section class="foot">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'footer3.css' %}">
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="title">
+                    <p>Designed and Developed by:</p>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Call:</span>
+                    <a href="tel:+2349130730895" class="contact-link">
+                        09130730895
+                        <img src="{% static 'phone3.png' %}" alt="Phone" class="gmail-logo">
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Email:</span>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=webdevdes989@gmail.com.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="contact-link">
+                        webdevdes989@gmail.com.com
+                        <img src="{% static 'gmail.png' %}" alt="Gmail" class="gmail-logo">
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+</section>

@@ -1,0 +1,436 @@
+<!-- main/templates/index.html -->
+{% include 'app1/base.html' %}
+{% load static %}
+<!-- Add viewport meta tag for responsiveness -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'style7.css' %}">
+{% load static %}
+
+
+    <title>hello</title>
+  <!-- Hero / Intro Section -->
+  <section class="hero">
+
+      <div class="hero-content">
+          <p class="str"><strong>Edeh Michael Onyema, PhD</strong></p><br>
+            <h1 class="hero-title">Computer Science | Cybersecurity | AI/ML | Education | Health Informatics</h1><hr><br>
+            {% comment %} <h1>
+            Michael Onyema Edeh, PhD  is a distinguished Nigerian academic that currently serves as the Deputy Dean and Head of the Department of Mathematics and Computer Science at Coal City University, Enugu, Nigeria, where he formerly held the position of Director of ICT. Michael is also an Adjunct Professor at Shobhit University in India; Institute of Management and Technology (IMT) Enugu Nigeria, and Enugu State College of Education Technical, Nigeria.<br> He has an extensive teaching portfolio, having lectured at various institutions, including Saveetha School of Engineering in Chennai, India, Spiritan University Nigeria, National Open University of Nigeria (NOUN), Alex Ekwueme Federal University in Ebonyi State, and Gregory University in Uturu (Enugu Study centre), Pogil College of Health Technology, Ogun State Nigeria, Southwestern University, Ogun State Nigeria;  African Thinkers Community of Inquiry College of Education (ATCOI-COE) Enugu Nigeria; and also  Federal Science and Technical College Ogun State. He is a Postdoctoral Research Fellow at Research Institute of IoT Cybersecurity, National Kaohsiung University of Science and Technology, Taiwan.<br> 
+            His research contributions are notable, with over 3,450 citations and an h-index of 25 on Google Scholar. He has published over 130 scholarly (research) papers in reputable journals, and authored different books. Prof. Michael has been recognized for his excellence in academia, receiving the Chancellor's Award for Best Staff of the Year in 2020 and the Vice Chancellor’s Award for Research Excellence in 2023 at Coal City University., and also listed among the Top Scientists  (Research Scholars) in Nigeria by Scopus (Scival) 2021-2025.  <br> He serves as the Chairman of the Nigeria Computer Society (NCS), Enugu State Chapter, and has delivered Keynote speeches for many organizations and conferences  both locally and internationally. He has acted as Guest for public Affairs Analysis on Television and radio including: Channels Television, Dream FM, Radio Nigeria and many others. His research interests include Computer science, cybersecurity, machine learning, education, and health informatics. 
+            </h1> {% endcomment %}
+            <h1>
+                Prof. Michael Onyema Edeh, PhD is a distinguished academic and public figure in the Nigerian and international educational communities, frequently recognized among Nigeria’s top research scientists (Elsevier Scopus/Scival, 2021–2025).  His leadership roles within academia, research output, and participation in professional and advisory boards underscore his expertise and influence in the fields of Computer science, Cybersecurity and educational technologies. He currently serves as the Dean, Faculty of Allied Health and Applied Sciences at Coal City University Nigeria, where he formerly held the position of Deputy Dean, SIWES (Internship program) Coordinator, Director of ICT, and Head of Department of Mathematics and Computer Science.  With a career rooted in teaching, research, and service, Prof. Michael Edeh has built a reputation for excellence in Cybersecurity, educational technology, artificial intelligence, and Health informatics. He also contributes to initiatives on educational resilience, with involvement featured on UNESCO’s Education4Resilience platform. He is also serves as the State Chairman of the Nigeria Computer Society, Enugu State Chapter, Nigeria. 
+                Prof. Edeh holds adjunct Professorial positions at numerous institutions in Nigeria and abroad, including Shobhit University (India), Saveetha Institute of Medical and Technical Sciences (India), Institute of Management and Technology (IMT), Enugu Nigeria; Enugu State college of Education Technical (ESCET) among others.  He is also a Postdoctoral Fellow at the Research Institute of IoT Cybersecurity, National Kaohsiung University of Science and Technology, Taiwan. His research spans over 130 peer-reviewed publications across top-tier journals such as Springer, Elsevier, IEEE, MDPI, Wiley, Sage, De Gruyter and Taylor & Francis etc. He has authored several books indexed in Scopus and Web of science. His research publications have attracted thousands of citations on Google Scholar and over 394,000 reads on ResearchGate.
+                In addition to his academic roles, he serves as an editor and reviewer for several international journals and conference proceedings. He has presented Keynote lectures and research papers at Several international conferences across the world, addressing topics from Cybersecurity, education technology, and Health informatics and Artificial intelligence. 
+                He is the recipient of multiple honors, including the Vice Chancellor’s Research Excellence Award (2023), Chancellor’s Best Staff Award (2020),  Student Spotlight at Peace Operation Training Institute, USA  in 2011, and a United Nations Peace Medal for his earlier contribution to global peacekeeping during his military service. He features as Guest analyst on public affairs programs across various television and radio platforms, including Channels Television, Dream FM, Radio Nigeria, and several others.           
+            </h1>
+      </div>
+      <img src="{% static 'quality.png' %}" alt="">
+
+  </section>
+ 
+
+  <section class="profile-section">
+    <div class="profile-header">
+      <h2 class="hero2"><img src="{% static 'sit.jpg' %}" alt=""></h2>
+    </div>
+    <div class="profile-container">
+      {% comment %} <div class="profile-image">
+        <!-- Replace with the actual image URL when available -->
+        <img src="{% static 'm7.jpg' %}" alt="Michael Onyema Edeh">
+      </div> {% endcomment %}
+      <div class="profile-details">
+        <h3>Academic and Professional Experience</h3><br>
+        <h4>Prof. Michael Onyema Edeh  has an extensive teaching portfolio, having lectured at numerous institutions both home and abroad, including:</h4>
+        <ul>
+          <li>Shobhit University, India</li>
+          <li>Southwestern University, Ogun State</li>
+          <li>Coal City University, Enugu, Nigeria</li>
+          <li>Spiritan University Nneochi, Abia State, Nigeria</li>
+          <li>National Open University of Nigeria (NOUN)</li>
+          <li>Alex Ekwueme Federal University, Ebonyi State, Nigeria</li>
+          <li>Gregory University, Uturu, Abia State, Nigeria</li>
+          <li>Enugu State College of Education Technical (ESCET), Enugu, Nigeria</li>
+          <li>Institute of Management and Technology (IMT), Enugu, Nigeria</li>
+          <li>African Thinkers Community of Inquiry College of Education (ATCOI-COE), Enugu, Nigeria</li>
+          <li>Pogil College of Health Technology, Ogun State, Nigeria</li>
+          <li>Saveetha School of Engineering, Saveetha Institute of Medical and Technical Sciences, Chennai 602105, India</li>
+          <li>Federal Science and Technical College, Ogun State, Nigeria</li>
+          <li>Yeshwantrao Chavan College of Engineering  (affiliated to Rashtrasant Tukadoji Maharaji Nagbur University ,India</li>
+          <li>Public Policy Analyst, Channels Television, FRCN</li>
+          <h4>His leadership roles extend beyond academia; he is the current Chairman of the Nigeria Computer Society (NCS), Enugu State Chapter.</h4>
+        </ul>
+
+        <h3>Leadership, Administrative &AMP; Professional Roles</h3>
+        <ul>
+            <li>Dean, Faculty of Allied Health and Applied Sciences, Coal City University, Enugu, Nigeria</li>
+            <li>Postdoctoral Fellow,  Research Institute of IoT /Cybersecurity, National Kaohsiung University of Science and Technology, Taiwan.</li>
+            <li>Member, International Advisory Board, Gurugram University, India</li>
+            <li>Former Deputy Dean, Faculty of Allied Health and Applied Sciences, Coal City University, Enugu,  Nigeria</li>
+            <li>Former Director of ICT, Coal City University, Enugu, Nigeria</li>
+            <li>Former Director of Student Industrial Work Experience Scheme (SIWES)/Internship, Coal City University, Enugu,  Nigeria</li>
+            <li>Former Head of Department, Mathematics and Computer Science, Coal City University, Enugu,  Nigeria</li>
+            <li>Professor, Dept. of Computer Science and Eng., Shobhit University, India</li>
+            <li>Adjunct Professor, Institute of Management and Technology (IMT), Enugu, Nigeria</li>
+            <li>Adjunct Professor, Enugu State College of Education Technical (ESCET), Nigeria</li>
+            <li>Adjunct Professor, Saveetha Institute of Medical and Technical Sciences, Chennai, India</li>
+            <li>Adjunct Senior Lecturer, Spiritan University, Abia State, Nigeria</li>
+            <li>Overseas Mentor (Visiting Scholar), Yeshwantrao Chavan College of Engineering, Nagpur, India</li>
+            <li>External Examiner, including for PhD</li>
+            <li>State Chairman, Nigeria Computer Society, Enugu State Chapter, Nigeria</li>
+            <li>Editor of several top ranked journals</li>
+            <li>Distinguished Keynote Speaker (locally and internationally)</li>
+            <li>Public Policy Analyst in several national media including Channels Television, FRCN, etc.</li>
+            <li>Member, Central Planning Committee, Enugu Tech Festival by Enugu State Government Nigeria</li>
+            <li>Fmr. Volunteer, Justice and Peace Development Commission (JDPC), Ijebu-Ode, Nigeria</li>
+            <li>Fmr. Intern, National Bureau of Statistics (NBS), Nigeria</li>
+            <li>Fmr. Intern, Ogun State College of Health Technology (now Ogun State Polytechnic of Health and Allied Sciences — OGITECH), Nigeria</li>
+            <li>Student Spotlight, Peace Operations Training Institute, Williamsburg, U.S.A. — Year 2011</li>
+            <li>Military Veteran</li>
+            <li>Nigeria Top Scientist/Scholar (Elsevier Scopus SciVal) for several years</li>
+        </ul>
+
+
+      </div>
+    </div>
+    <div class="books">
+      <div class="banners">
+        <span class="line"></span>
+        <div class="text">BOOK PUBLICATIONS</div>
+        <span class="line"></span>
+      </div> 
+      <div class="container">
+        
+        <a href="https://www.routledge.com/Leveraging-the-Potential-of-Artificial-Intelligence-in-the-Real-World-Smart-Cities-and-Healthcare/Tran-Onyema-Abougreen/p/book/9781032667485?srsltid=AfmBOor6LuwZD-a-vWNSMbkQqPYZstccuN8T5zquZgbLdp0I_Rqf84mD" target="_blank">
+            <div class="card1">
+                <img src="{% static 'book2.jpg' %}" alt="Vanilla Cone">
+                <div class="card-title">Leveraging the Potential of Artificial Intelligence in the Real World<br><em>Smart Cities and Healthcare</em></div>
+            </div>
+        </a>
+        <a href="https://link.springer.com/book/9789819677528?srsltid=AfmBOoqKHSgKiD_fKsBubkeXwkaqU-XMJ0YqLTQKOLOBeWBA0yf3QyGZ"  target="_blank">
+            <div class="card1">
+                <img src="{% static 'book6.jpeg' %}" alt="Vanilla Cone">
+                <div class="card-title">Hybrid Intelligence<br><em>Theories and Applications</em><br><p class="white">.</p></div>
+            </div>
+        </a>
+        <a href="https://www.routledge.com/Defending-the-Metaverse-Cybersecurity-Strategies-for-the-Next-Generation-Internet/Sheth-Ouaissa-Ouaissa-Onyema-Parekha/p/book/9781032946832?srsltid=AfmBOorko6wGTjU1q2INmWmJaEhmNEzQwedt_nFkhmMrWeBoJNReAkNY" target="_blank">
+            <div class="card1">
+                <img src="{% static 'book1.jpeg' %}" alt="Vanilla Cone">
+                <div class="card-title">Defending the Metaverse<br><em>Cybersecurity Strategies for the Next Generation Internet</em></div>
+            </div>
+        </a>
+        <a href="https://www.igi-global.com/book/transformative-role-transformer-models-healthcare/367328" target="_blank">
+            <div class="card1">
+                <img src="{% static 'book41.jpeg' %}" alt="Vanilla Cone">
+                <div class="card-title">Transformative Role of Transformer Models in Healthcare<br><p class="white">.</p></div>
+            </div>
+        </a>
+        <a href="https://www.igi-global.com/publish/call-for-papers/call-details/8428" target="_blank">
+            <div class="card1">
+                <img src="{% static 'book5.jpg' %}" alt="Vanilla Cone">
+                <div class="card-title">Transformative Role of Transformer Models in Healthcare<br><p class="white">.</p></div>
+            </div>
+        </a>
+        <a href="#" target="_blank">
+            <div class="card1">
+                <img src="{% static 'book3.jpg' %}" alt="Vanilla Cone">
+                <div class="card-title">Introduction to Compiler Construction <em>2</em> <p class="white">.</p><p class="white">.</p></div>
+            </div>
+        </a>
+        <a href="#" target="_blank">
+            <div class="card1">
+                <img src="{% static 'book4.jpg' %}" alt="Vanilla Cone">
+                <div class="card-title">Computer Installation Management <div class="white">.</div><p class="white">.</p></div>
+            </div>
+        </a>
+        <a href="#" target="_blank">
+            <div class="card1">
+                <img src="{% static 'book5.jpg' %}" alt="Vanilla Cone">
+                <div class="card-title">Discrete Structures<br>Foundations and Applications for Computer Science</div>
+            </div>
+        </a>
+        <a href="#" target="_blank">
+            <div class="card1">
+                <img src="{% static 'book82.jpg' %}" alt="Vanilla Cone">
+                <div class="card-title">Introduction to Computer Architecture<br> and Embedded Design with Arduino<p class="white">.</p></div>
+            </div>
+        </a>
+      </div>
+    </div>
+    <div class="pictures">
+      {% comment %} <div class="banner">
+        <span class="line"></span>
+        <div class="text">IMAGES</div>
+        <span class="line"></span>
+      </div>  {% endcomment %}
+      <div class="container">
+        <div class="card">
+            <img src="{% static 'b9.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'n8.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'b7.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'q21.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'q22.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'm3.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'm5.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'm6.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'm7.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'm8.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'm9.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'n1.jpg' %}" alt="Vanilla Cone">
+        </div>
+        
+        <div class="card">
+            <img src="{% static 'n2.jpg' %}" alt="Vanilla Cone">
+        </div>
+        
+        <div class="card">
+            <img src="{% static 'b5.jpg' %}" alt="Vanilla Cone">
+        </div>
+        
+        <div class="card">
+            <img src="{% static 'n9.jpg' %}" alt="Vanilla Cone">
+        </div>
+        
+        <div class="card">
+            <img src="{% static 'n5.jpg' %}" alt="Vanilla Cone">
+        </div>
+        
+        <div class="card">
+            <img src="{% static 'about1.jpg' %}" alt="Vanilla Cone">
+        </div>
+        
+        <div class="card">
+            <img src="{% static 'about2.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'bg1.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'bg2.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'cap.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'edeh.jpeg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'faveicon.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'good.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'michael.png' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'nice.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'sit.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'n6.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'e10.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'n8.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'n4.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'e1.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'b2.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'b3.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'b4.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'n3.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'b6.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'm2.jpg' %}" alt="Vanilla Cone">
+        </div>
+        <div class="card">
+            <img src="{% static 'b8.jpg' %}" alt="Vanilla Cone">
+        </div>
+        
+      </div>
+    </div>
+    <div class="videos">
+        <div class="card">
+            <iframe
+            src="https://www.youtube.com/embed/cnecDvkeGBo"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            ></iframe>
+        </div>
+
+        <div class="card">
+            <iframe
+            src="https://youtube.com/embed/mIzMXY51GY4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            ></iframe>
+        </div>
+        <div class="card">
+            <iframe
+            src="https://www.youtube.com/embed/n40OVS-F0Qo"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            ></iframe>
+        </div>
+        <div class="card">
+            <iframe
+            src="https://www.youtube.com/embed/tDncg0Z8Iqg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            ></iframe>
+        </div>
+        <div class="card">
+            <iframe
+            src="https://www.youtube.com/embed/cgQvJ98xowc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            ></iframe>
+        </div>
+        <div class="card">
+            <iframe
+            src="https://www.youtube.com/embed/Ou_h-EQdnmA"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            ></iframe>
+        </div>
+        <div class="card">
+            <iframe
+            src="https://www.youtube.com/embed/IMPg7ywCc2A"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            ></iframe>
+        </div>
+        <div class="card">
+            <iframe
+            src="https://www.youtube.com/embed/WzEyNtWn-0o"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            ></iframe>
+        </div>
+        <div class="card">
+            <iframe
+            src="https://www.youtube.com/embed/OC1mbOVkwv4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            ></iframe>
+        </div>
+    </div>
+    <div class="profile-contact1">
+        <div class="profile-contact">
+            <h3>Contact</h3>
+            <p><strong>Email:</strong> mikedreamcometrue@gmail.com</p>
+            <p><strong>Phone/WhatsApp:</strong> +2347039009048</p>
+        </div>
+        <div class="profile-contact2">
+            <p class="social">Social Accounts</p>
+            <div class="social-icons">
+            <!-- Replace static path references with your actual paths -->
+            <a href="https://www.linkedin.com/in/michael-onyema-edeh-ph-d-817928205/?originalSubdomain=ng" target="_blank">
+              <img src="{% static 'link2.jpg' %}" alt="LinkedIn" class="first">
+            </a>
+            <a href="https://web.facebook.com/prof.mikel" target="_blank">
+              <img src="{% static 'face3.png' %}" alt="Facebook" class="third">
+            </a>
+            <a href="https://scholar.google.com/citations?user=Y6UiUoEAAAAJ&hl=en" target="_blank">
+              <img src="{% static 'gs3.jpg' %}" alt="Google Scholar" class="second">
+            </a>
+            <a href="https://www.researchgate.net/profile/Edeh-Onyema?ev=hdr_xprf" target="_blank">
+              <img src="{% static 'rg6.png' %}" alt="ResearchGate" class="second">
+            </a>
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=57226165864" target="_blank">
+              <img src="{% static 'scope6.png' %}" alt="ResearchGate" class="second">
+            </a>
+            <a href="https://www.webofscience.com/wos/author/record/ABO-8233-2022" target="_blank">
+              <img src="{% static 'clarivate.png' %}" alt="ResearchGate" class="second">
+            </a>
+          </div>
+        </div>
+    </div>
+    </section>
+    <section>
+        <link rel="stylesheet" href="{% static 'footer3.css' %}">
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="title">
+                    <p>Designed and Developed by:</p>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Call:</span>
+                    <a href="tel:+2349130730895" class="contact-link">
+                        09130730895
+                        <img src="{% static 'phone3.png' %}" alt="Phone" class="gmail-logo">
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Email:</span>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=webdevdes989@gmail.com.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="contact-link">
+                        webdevdes989@gmail.com.com
+                        <img src="{% static 'gmail.png' %}" alt="Gmail" class="gmail-logo">
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+    </section>

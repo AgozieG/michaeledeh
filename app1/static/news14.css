@@ -1,0 +1,248 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px;
+    background: radial-gradient(circle, #f0f0f0, #d0d0d0);
+  }
+  h2{
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    margin-top: 100px;
+    font-size: 40px;
+    margin-left: 70px;
+    text-decoration: underline;
+  }
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    height: 200px;
+    padding-bottom: 20px;
+  }
+  .card .text {
+    color: rgb(63, 63, 63);
+    margin-top: 5px;
+    padding-bottom: 50px;
+  }
+  .card .card-title:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(119, 136, 153,0.5);
+    margin: 5px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px;
+    text-decoration: none;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  .white{
+    color: white;
+  }
+  .banner {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 150px;
+    margin-left: 450px;
+    width: 25%;
+    margin-bottom: 20px;
+  }
+  .banner .line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: black;
+    margin-top: 17px;
+  }
+  .banner .text {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(53, 53, 53);
+    margin: 0 20px;
+    text-transform: uppercase;
+    background-color: rgb(207, 207, 207);
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+
+
+  .publication-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Publication entry styled as a card with flex layout */
+  .publication-entry {
+    position: relative; /* For orange stripe */
+    display: grid;
+    align-items: flex-start;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden; /* To ensure rounded corners clip children if needed */
+    width: 530px;
+    height: 200px;
+  }
+  .publication-entry:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.9s ease, box-shadow 1s ease;
+  }
+
+  /* Orange vertical stripe on the left */
+  .publication-entry::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(135deg, #1e90ff, #4facfe);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  /* The publication image on the left side */
+  .publication-image {
+    width: 200px;
+    height: 100px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 20px; /* Creates spacing from the borders */
+    flex-shrink: 0;  /* Prevent image from shrinking */
+  }
+
+  /* Container for the textual information */
+  .publication-info {
+    padding: 20px;
+    margin-top: -20px;
+  }
+
+  .publication-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .publication-details {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+
+  .publication-meta {
+    font-size: 0.85rem;
+    color: #666;
+  }
+
+  .publication-meta span.publisher {
+    font-weight: bold;
+    color: #333;
+  }
+  a {
+    text-decoration: none;
+    color: rgb(59, 59, 59); /* Link color */
+  }
+
+
+  /* ===== Responsive CSS for news7.css (keeps colours & structure) ===== */
+
+
+
+/* Publication container: responsive grid so cards wrap neatly */
+
+
+/* Each entry: keep image-left / text-right layout using flex */
+
+
+/* Image on left: responsive sizes */
+
+
+/* link color left unchanged */
+a { text-decoration: none; color: inherit; }
+
+/* ---------------- Tablet (<= 1024px) ---------------- */
+@media (max-width: 1024px) {
+  .publication-container {
+    grid-template-columns: repeat(2, 1fr); /* two columns on tablets if space permits */
+    gap: 16px;
+    padding: 0 14px;
+    margin-top: -30px;
+  }
+  .publication-entry { padding: 10px; }
+  .publication-image { width: 160px; height: 90px; }
+  .publication-title { font-size: 0.98rem; }
+}
+
+/* ---------------- Mobile (<= 768px) ---------------- */
+/* Keep image left / text right but scale image smaller so the card fits full width */
+@media (max-width: 768px) {
+  html, body { overflow-x: scroll; } /* prevent horizontal scroll */
+
+  .publication-container {
+    flex-direction: column; /* single column layout */
+    gap: 2px;
+    padding: 0 10px;
+    margin-top: -10px;
+  }
+  .banner{
+    margin-top: -30px;
+  }
+
+  .publication-entry {
+    
+    padding: 10px;
+    gap: 10px;
+    width: 32%;
+    margin-left: 400px;
+  }
+
+  .publication-image {
+    width: 120px;
+    height: 72px;
+    margin-left: 6px;
+  }
+
+  .publication-info { padding: 6px 8px; margin-top: 5px;}
+  .publication-title { font-size: 0.95rem; }
+}
+
+/* --------------- Very small phones (<= 420px) --------------- */
+@media (max-width: 420px) {
+  .publication-entry { gap: 8px; padding: 8px; }
+  .publication-image { width: 96px; height: 60px; }
+  .publication-title { font-size: 0.92rem; }
+  .banner {padding: 10px; }
+}

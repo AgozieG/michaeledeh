@@ -1,0 +1,78 @@
+/* static/css/style.css */
+
+/* Base reset & colors */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;   /* white background */
+  color: #000000;              /* black text */
+  margin-top: 90px;
+}
+
+/* Centered card container */
+.container {
+  max-width: 480px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;   /* very light gray for contrast */
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-top: 150px;
+}
+
+/* Headings */
+.container h1 {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  text-align: center;
+  color: #002f6c;              /* dark blue header */
+}
+
+/* Form elements */
+.container form p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.container label {
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+.container input[type="text"],
+.container textarea,
+.container input[type="file"] {
+  padding: 0.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Submit button */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0055b8;   /* medium blue button */
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;              /* white text */
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+button[type="submit"]:hover {
+  background-color: #003f8a;   /* darker blue on hover */
+}
+
+/* Success message */
+.success {
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #0055b8;
+  background-color: #e6f0ff;   /* very light blue */
+  color: #002f6c;
+  border-radius: 4px;
+  text-align: center;
+}

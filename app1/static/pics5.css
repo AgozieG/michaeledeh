@@ -1,0 +1,111 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px;
+    background: radial-gradient(circle, #f0f0f0, #d0d0d0);
+  }
+  h2{
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    margin-top: 150px;
+    font-size: 40px;
+    margin-left: 70px;
+    text-decoration: underline;
+  }
+
+  .card img {
+    width: auto;
+    height: 250px;
+    border-radius: 8px;
+  }
+  .card img:hover {
+    transform: scale(1.15);
+    transition: transform 0.3s ease;
+  }
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 2px;
+    height: auto;
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    text-decoration: none;
+    margin-top: 120px;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  .white{
+    color: white;
+  }
+  .banner {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 130px;
+    margin-left: 275px;
+    width: 55%;
+  }
+  .banner .line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: black;
+    margin-top: 17px;
+  }
+  .banner .text {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(53, 53, 53);
+    margin: 0 20px;
+    text-transform: uppercase;
+  }
+
+  /* === Force 2-column grid on larger screens === */
+
+
+/* === Tablet screens: keep 2 columns but smaller gap === */
+
+
+/* === Mobile screens: switch to 1 column === */
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    gap: 5px !important;
+    padding: 10px !important;
+    margin: 0px;
+  }
+  .card {
+    max-width: 50% !important;
+    width: 32%;
+    height: fit-content;
+  }
+  .card img {
+    width: 90% !important;
+    height: auto !important;
+  }
+}

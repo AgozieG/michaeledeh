@@ -1,0 +1,121 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+    {% include "app1/base.html" %}
+    <link rel="stylesheet" href="{% static 'about25.css' %}">
+    {% load static %}
+</head>
+<body>
+    {% comment %} <div class="container">
+        <!-- Profile Image -->
+        <img src="{% static 'about1.jpg' %}" alt="Professor Chukwumerije Okereke" class="profile-img" />
+        <!-- Name and Title -->
+        <h1>Edeh Michael Onyema, PhD</h1>
+        <p class="title">Doctor of Philosophy</p>
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <p>Email: mikedreamcometrue@gmail.com</p>
+            <p>Phone: +2347039009048</p>
+        </div>
+        <!-- Social Media Icons (animated on hover) -->
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/michael-onyema-edeh-ph-d-817928205/?originalSubdomain=ng" target="_blank"><img src="{% static 'in.jpeg' %}" alt=""></img></a>
+            <a href="https://web.facebook.com/prof.mikel" target="_blank"> <img src="{% static 'face.jpeg' %}" alt=""></img></a>
+            <a href="https://scholar.google.com/citations?user=Y6UiUoEAAAAJ&hl=en" target="_blank"> <img src="{% static 'gs.png' %}" alt=""></img></a>
+            <a href="https://www.researchgate.net/profile/Edeh-Onyema?ev=hdr_xprf" target="_blank"> <img src="{% static 'rg.jpeg' %}" alt=""></img></a>
+        </div>
+    </div> {% endcomment %}
+    <div class="profile-card">
+        <!-- LEFT SIDE: Text & Contact Info -->
+        <div class="info-section">
+          <!-- Black box with name and title -->
+          <div class="name-title-box">
+            <!-- If you want a small icon in the black box, uncomment or adjust this div
+            <div class="name-icon"></div> 
+            -->
+            <div class="name-details">
+              <!-- Name and Title -->
+              <h1>Edeh Michael Onyema, PhD</h1>
+              <p>Computer Science | Cybersecurity | AI/ML | Education | Health Informatics</p>
+            </div>
+          </div>
+    
+          <!-- Contact info -->
+          <div class="contact-section">
+            <p><i class="fa fa-envelope"></i><strong>Email: </strong>  mikedreamcometrue@gmail.com</p>
+            <p><i class="fa fa-phone"></i><strong>Number: </strong>  +2347039009048</p>
+          </div>
+    
+          <!-- Social icons -->
+          <div class="social-icons">
+            <!-- Replace static path references with your actual paths -->
+            <a href="https://www.linkedin.com/in/michael-onyema-edeh-ph-d-817928205/?originalSubdomain=ng" target="_blank">
+              <img src="{% static 'link2.jpg' %}" alt="LinkedIn" class="first">
+            </a>
+            <a href="https://web.facebook.com/prof.mikel" target="_blank">
+              <img src="{% static 'face3.png' %}" alt="Facebook" class="third">
+            </a>
+            <a href="https://scholar.google.com/citations?user=Y6UiUoEAAAAJ&hl=en" target="_blank">
+              <img src="{% static 'gs3.jpg' %}" alt="Google Scholar" class="second">
+            </a>
+            <a href="https://www.researchgate.net/profile/Edeh-Onyema?ev=hdr_xprf" target="_blank">
+              <img src="{% static 'rg6.png' %}" alt="ResearchGate" class="second">
+            </a>
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=57226165864" target="_blank">
+              <img src="{% static 'scope6.png' %}" alt="ResearchGate" class="second">
+            </a>
+            <a href="https://www.webofscience.com/wos/author/record/ABO-8233-2022" target="_blank">
+              <img src="{% static 'clarivate.png' %}" alt="ResearchGate" class="second">
+            </a>
+          </div>
+        </div>
+    
+        <!-- RIGHT SIDE: Profile Image -->
+        <div class="image-section">
+          <!-- Replace the image path with your own -->
+          <img src="{% static 'faveicon.jpg' %}" alt="Edeh Michael Onyema, PhD">
+        </div>
+    </div>
+    <div class="text">
+       <p><strong>Michael Onyema Edeh, PhD</strong> is a distinguished computer scientist, educator, and academic leader frequently recognized among Nigeria’s top research scientists (Elsevier Scopus/Scival, 2021–2025). He currently serves as the Dean, Faculty of Allied Health and Applied Sciences at Coal City University Nigeria, where he formerly held the position of Deputy Dean, SIWES Coordinator, Director of ICT, and Head of Department of Mathematics and Computer Science.  With a career rooted in teaching, research, and service, Prof. Michael Edeh has built a reputation for excellence in Cybersecurity, educational technology, artificial intelligence, and Health informatics. He is also the State Chairman of the Nigeria Computer Society, Enugu State Chapter, Nigeria.
+                Prof. Edeh holds adjunct Professorial positions at numerous institutions in Nigeria and abroad, including Shobhit University (India), Saveetha Institute of Medical and Technical Sciences (India), Institute of Management and Technology (IMT), Enugu Nigeria; Enugu State college of Education Technical (ESCET) among others.  He is also a Postdoctoral Fellow at the Research Institute of IoT Cybersecurity, National Kaohsiung University of Science and Technology, Taiwan. His research spans over 130 peer-reviewed publications across top-tier journals such as Springer, Elsevier, IEEE, MDPI, Wiley, Sage, De Gruyter and Taylor & Francis etc. He has authored several books indexed in Scopus and Web of science. His research publications have attracted thousands of citations on Google Scholar and over 392,000 reads on ResearchGate.
+                In addition to his academic roles, he serves as an editor and reviewer for several international journals and conference proceedings. He has presented Keynote lectures and research papers at Several international conferences across the world, addressing topics from Cybersecurity, education technology, and Health informatics and Artificial intelligence.
+                He is the recipient of multiple honors, including the Vice Chancellor’s Research Excellence Award (2023), Chancellor’s Best Staff Award (2020), and a United Nations Peace Medal for his earlier contribution to global peacekeeping during his military service. He features as Guest analyst on public affairs programs across various television and radio platforms, including Channels Television, Dream FM, Radio Nigeria, and several others.
+        </p>
+    </div>
+</body>
+</html>
+<section>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'footer3.css' %}">
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="title">
+                    <p>Designed and Developed by:</p>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Call:</span>
+                    <a href="tel:+2349130730895" class="contact-link">
+                        09130730895
+                        <img src="{% static 'phone3.png' %}" alt="Phone" class="gmail-logo">
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Email:</span>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=webdevdes989@gmail.com.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="contact-link">
+                        webdevdes989@gmail.com.com
+                        <img src="{% static 'gmail.png' %}" alt="Gmail" class="gmail-logo">
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+    </section>

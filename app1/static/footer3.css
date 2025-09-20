@@ -1,0 +1,133 @@
+/* ensure page content never hides under footer */
+body {
+  margin: 0;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.site-footer {
+  /* position: fixed;
+  bottom: 0;
+  left: 0; */
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  border-top: 4px solid darkblue;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  z-index: 1000;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.foot{
+  width: 100%;
+}
+
+.title {
+    color: rgb(141, 141, 141);
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: bolder;
+    margin-left: 190px;
+}
+
+.title2 {
+    color: rgb(141, 141, 141);
+    font-size: 1.4rem;
+    margin-left: 70px;
+    font-weight: bolder;
+}
+.site-footer .footer-inner {
+  display: flex;
+  flex: 1;
+  gap: 2rem;
+  margin-left: 130px;
+  
+}
+
+.site-footer .contact-item {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.site-footer .contact-label {
+  font-weight: bold;
+  margin-right: 0.2rem;
+  color: white;
+}
+
+.site-footer .contact-link {
+  text-decoration: none;
+  color: whitesmoke;
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-footer .contact-link:hover {
+  text-decoration: underline;
+}
+
+.site-footer .gmail-logo {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.3rem;
+}
+
+/* Responsive for tablets */
+@media (max-width: 1024px) {
+  .site-footer {
+    height: auto;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+  .site-footer .footer-inner {
+    gap: 1rem;
+    margin-left: 30px;
+    flex-wrap: wrap;
+  }
+  .title, .title2 {
+    font-size: 1.1rem;
+    margin-left: 30px;
+  }
+  .site-footer .contact-item {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
+
+/* Responsive for phones */
+@media (max-width: 600px) {
+  .site-footer {
+    height: auto;
+    padding: 10px 0;
+    font-size: 0.95rem;
+  }
+  .site-footer .footer-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 0;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .title, .title2 {
+    font-size: 1rem;
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+  .site-footer .contact-item {
+    margin-left: 0;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+  }
+  .site-footer .gmail-logo {
+    width: 18px;
+    height: 18px;
+    margin-left: 0.2rem;
+  }
+}

@@ -1,0 +1,505 @@
+/* Reset / Box-Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+  }
+  
+  /* Header and Nav */
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: background-color 0.3s ease;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: rgb(72, 72, 72);
+  }
+  
+  /* Sticky nav effect */
+  header.sticky {
+    background-color: rgba(0, 0, 0, 0.95);
+    animation: slideDown 0.5s ease forwards;
+  }
+  
+  /* Navbar layout */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: transparent;
+    color: #000;
+  }
+  
+  /* Logo area */
+  .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Logo image styling */
+  .logo-img {
+    margin-right: 10px;
+    margin-left: -110px;
+    height: 60px;
+    width: auto;
+    vertical-align: middle;
+    border-radius: 30px;
+    background-color: rgb(255,255,255);
+    box-shadow: #000000 10px 10px 20px;
+  }
+  
+  /* Logo text styling */
+  .logo-text {
+    font-size: 1.2rem;
+    color: white;
+    margin-left: 10px;
+    margin-top: 0;
+    padding: 0;
+    padding-bottom: 0;
+    font-weight: bold;
+  }
+  
+  /* Nav links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0; /* Remove gap for custom spacing */
+    margin-right: 0;
+    width: auto;
+    justify-content: space-between; /* Evenly space out links */
+    flex: 1;
+    padding-left: 0;
+  }
+  
+  /* Prevent nav link text from wrapping to the next line */
+.nav-links a {
+  /* ...existing code... */
+  white-space: nowrap;
+}
+
+  
+  /* Space out each nav link equally in laptop view */
+  @media (min-width: 1025px) {
+    .nav-links {
+      width: 100%;
+      margin-right: -120px;
+      gap: 0px; /* Increase spacing between menu items */
+    }
+    .nav-links li {
+      flex: 1 1 0;
+      text-align: center;
+      padding: 0 20px; /* Increase padding for more space */
+    }
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #1e90ff;
+  }
+
+
+  /* Initial styles for the link */
+  .nav-links a{
+  text-decoration: none;
+  position: relative;
+  color: #ffffff; /* Change this to your preferred color */
+}
+
+/* Create the underline effect */
+.nav-links a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the underline */
+  bottom: 0;
+  left: 0;
+  background-color: #4facfe; /* Change this to your preferred color */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 1s ease-in-out; /* Adjust the duration and timing function */
+}
+
+/* Hover effect */
+.nav-links a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.nav-links a:active{
+  color: #ffd6f2;
+  text-decoration: underline;
+  position: relative;
+  color: #ffffff; /* Change this to your preferred color */
+  
+}
+
+
+
+
+
+  
+  /* Dropdown styles */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background-color: #333;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(40px); /* Start further down */
+    transition: opacity 1.5s ease, transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 10px;
+    
+  }
+  
+  /* Animate dropdown from down to up */
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideUp 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  /* Keyframes for slide up animation */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .dropdown-content li {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    
+  }
+  
+  .dropdown-content li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .dropdown-content li a:hover {
+    background-color: #555;
+  }
+  
+  /* Hero / Intro Section */
+
+  /* Animations */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Simple fadeIn animations */
+  .animated {
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+  
+  .fadeInDown {
+    animation: fadeInDown 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* main/static/css/style.css */
+
+  /* Ensure proper spacing in navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+  }
+.navbar.logo.left{
+    display: inline;
+  }
+
+/* Ensure logo and menu icon are on the same row for tablet and phone */
+.navbar-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Responsive for tablets and phones */
+@media (max-width: 1024px) {
+  .navbar-header {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .logo {
+    margin-bottom: 0;
+  }
+  .menu-toggle {
+    margin-left: auto;
+  }
+}
+@media (max-width: 600px) {
+  .navbar-header {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .logo {
+    margin-bottom: 0;
+  }
+  .menu-toggle {
+    margin-left: auto;
+  }
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 1024px) {
+  header {
+    padding: 0;
+  }
+  .navbar {
+    padding: 10px 2vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .logo-img {
+    height: 60px;
+    margin-left: -20px;
+  }
+  .logo p {
+    font-size: 1rem;
+    margin-left: 20px;
+    margin-top: -40px;
+    padding: 5px;
+    padding-bottom: 10px;
+  }
+  .nav-links {
+    gap: 10px;
+    font-size: 0.95rem;
+  }
+  .nav-links li {
+    padding: 0 2px;
+  }
+  .dropdown-content {
+    min-width: 150px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsive adjustments for phones */
+@media (max-width: 600px) {
+  header {
+    position: static;
+    width: 100vw;
+    border-radius: 0;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 2vw;
+  }
+  .logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .logo-img {
+    height: 40px;
+    margin-left: 0;
+    margin-right: 5px;
+    padding: 0;
+  }
+  .logo p {
+    font-size: 0.9rem;
+    margin-left: 8px;
+    margin-top: 0;
+    padding: 0;
+    padding-bottom: 0;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    font-size: 0.9rem;
+    margin-top: 8px;
+  }
+  .nav-links li {
+    width: 100%;
+    padding: 6px 0;
+  }
+  .nav-links a {
+    padding: 8px 0;
+    width: 100%;
+    display: block;
+    font-size: 1rem;
+  }
+  .dropdown-content {
+    position: static;
+    min-width: 100vw;
+    border-radius: 0;
+    font-size: 0.9rem;
+    box-shadow: none;
+  }
+}
+
+/* Hamburger button styles */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 1001;
+}
+
+/* Responsive menu popup/hide for tablets and phones */
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh; /* full screen height */
+    width: 50vw;   /* half screen width */
+    max-width: 350px;
+    background: rgba(72, 72, 72, 0.5); /* 50% transparent */
+    flex-direction: column;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    padding: 30px 0 0 0;
+    display: none;
+    z-index: 1000;
+    border-radius: 0 0 10px 10px;
+    overflow-y: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-links li {
+    padding: 10px 20px;
+    width: 100%;
+  }
+  .nav-links a {
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  .dropdown-content {
+    position: static;
+    min-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 1rem;
+    background: rgba(51,51,51,0.5); /* dropdown also transparent */
+  }
+}
+
+/* For phones, make menu half width, full height */
+@media (max-width: 600px) {
+  .nav-links {
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50vw;
+    max-width: 100vw;
+    border-radius: 0 0 10px 10px;
+    padding: 20px 0 0 0;
+    overflow-y: auto;
+  }
+  .nav-links li {
+    padding: 8px 16px;
+  }
+  .nav-links a {
+    font-size: 1rem;
+  }
+  .dropdown-content {
+    background: rgba(51,51,51,0.5);
+  }
+}
+
+/* For phones, make menu full width */
+@media (max-width: 600px) {
+  .nav-links {
+    top: 50px;
+    right: 0;
+    width: 100vw;
+    max-width: 100vw;
+    border-radius: 0 0 10px 10px;
+    padding: 10px 0;
+  }
+  .nav-links li {
+    padding: 8px 16px;
+  }
+  .nav-links a {
+    font-size: 1rem;
+  }
+}
+
+
